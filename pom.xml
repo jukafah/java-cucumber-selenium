@@ -17,26 +17,40 @@
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>1.1.6</version>
+            <version>1.2.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>1.1.6</version>
+            <version>1.2.5</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>1.2.5</version>
             <scope>test</scope>
         </dependency>
-        <dependency>   
-    		<groupId>org.picocontainer</groupId>  
-    		<artifactId>picocontainer</artifactId>
-    		<version>2.14.3</version>
-		</dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>1.2.5</version>
+            <type>pom</type>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>junit</groupId>-->
+            <!--<artifactId>junit</artifactId>-->
+            <!--<version>4.11</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <!--<dependency>   -->
+    		<!--<groupId>org.picocontainer</groupId>  -->
+    		<!--<artifactId>picocontainer</artifactId>-->
+    		<!--<version>2.14.3</version>-->
+		<!--</dependency>-->
 
     </dependencies>
 

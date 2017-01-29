@@ -5,18 +5,23 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.junit.Cucumber;
 import org.openqa.selenium.WebDriver;
 
 import com.cucumber.pages.Homepage;
 
 public class HomepageSteps {
 
-	private final Homepage page;
+	private Homepage page;
+	private final WebDriver driver;
 	
 	public HomepageSteps(WebDriver driver)
 	{
+//		super(page.class);
+//		super(Homepage.class);
+		this.driver = driver;
 		System.out.println("public Steps");
-		page = new Homepage(driver);
+		page = new Homepage(this.driver);
 	}
 	
 	@Given("^I am on \"(.*?)\"$")
