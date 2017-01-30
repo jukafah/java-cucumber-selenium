@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e81e842-32c4-41df-9ca2-1764f0e175ea" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/resources/cucumber.properties" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/cucumber.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_picocontainer_picocontainer_2_15.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/cucumber.properties" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Runner.java" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/RunCukeTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin" afterPath="$PROJECT_DIR$/bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cucumber-selenium.iml" afterPath="$PROJECT_DIR$/cucumber-selenium.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Hooks.java" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Hooks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Runner.java" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Runner.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,38 +39,8 @@
       <file leaf-file-name="Homepage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cucumber/pages/Homepage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/Runner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomepageSteps.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,8 +48,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cucumber-selenium.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cucumber-selenium.iml">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunCukeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/RunCukeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomepageSteps.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hooks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/Hooks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PicoFactory.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-picocontainer/1.2.5/cucumber-picocontainer-1.2.5-sources.jar!/cucumber/runtime/java/picocontainer/PicoFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -84,31 +106,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hooks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/Hooks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="20" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cucumber.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/cucumber.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -122,10 +127,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/cucumber/pages/Homepage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cucumber/steps/CustomPicoFactory.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/cucumber.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Runner.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cucumber/steps/RunCukeTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/cucumber/steps/Hooks.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java" />
       </list>
     </option>
   </component>
@@ -202,6 +210,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -334,7 +346,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="PACKAGE_NAME" value="com.cucumber.steps" />
-      <option name="MAIN_CLASS_NAME" value="com.cucumber.steps.Runner" />
+      <option name="MAIN_CLASS_NAME" value="com.cucumber.steps.RunCukeTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -595,34 +607,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JUnit - 2017.01.29 at 16h 25m 21s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 48m 46s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 16h 26m 17s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 49m 37s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 16h 29m 23s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 49m 56s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 16h 39m 53s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 50m 20s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 16h 40m 19s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 50m 59s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 16h 44m 29s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 57m 16s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 16h 58m 48s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 58m 41s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 17h 11m 46s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 18h 59m 26s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 17h 14m 26s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 19h 00m 33s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="JUnit - 2017.01.29 at 17h 18m 51s.xml">
+    <history-entry file="JUnit - 2017.01.29 at 19h 01m 14s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -717,6 +729,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber-selenium.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/cucumber.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/homepage.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/CustomPicoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-picocontainer/1.2.5/cucumber-picocontainer-1.2.5.jar!/cucumber/runtime/java/picocontainer/PicoFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-picocontainer/1.2.5/cucumber-picocontainer-1.2.5-sources.jar!/cucumber/runtime/java/picocontainer/PicoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/cucumber.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="70" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cucumber/helpers/Helpers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -727,40 +795,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cucumber/pages/Homepage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/Runner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber-selenium.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="435">
+          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/RunCukeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        <state relative-caret-position="90">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -769,21 +823,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/Hooks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="233">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/cucumber.properties">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cucumber/steps/HomepageSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="59" lean-forward="false" selection-start-line="0" selection-start-column="59" selection-end-line="0" selection-end-column="59" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="16" column="56" lean-forward="false" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

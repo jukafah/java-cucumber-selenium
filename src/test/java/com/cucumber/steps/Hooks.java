@@ -6,6 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
+import cucumber.api.Scenario;
+
+//import cucumber.api.picocontainer;
+
 import org.picocontainer.DefaultPicoContainer;
 
 public class Hooks {
@@ -13,21 +17,14 @@ public class Hooks {
 	private WebDriver driver;
 
 	@Before
-	public void beforeScenario() {
-		this.driver = new ChromeDriver();
-		driver.navigate().to("http://google.com");
+	public void beforeScenario(Scenario scenario) {
 
-//		DefaultPicoContainer pico = new DefaultPicoContainer();
-//		pico.addComponent(driver.getClass());
-//		pico.addComponent(ThreadPool.class, DefaultThreadPool.class);
-//		pico.addComponent(MyComp.class, MyComp.class);
-//
-//		MyComp myComp = (MyComp)pico.getInstance(MyComp.class);
+
 	}
 
 	
 	@After
-	public void afterScenario() {
-		driver.quit();
+	public void afterScenario(Scenario scenario) {
+
 	}
 }

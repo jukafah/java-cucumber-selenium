@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 				 format = { "pretty",
 						 	"html:target/cucumber-html-report" },
 				 tags = {})
-public class Runner {
-	
+public class RunCukeTest {
+
 
 }
