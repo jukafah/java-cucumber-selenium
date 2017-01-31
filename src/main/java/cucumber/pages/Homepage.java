@@ -1,5 +1,6 @@
-package com.cucumber.pages;
+package cucumber.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +19,10 @@ public class Homepage {
     	driver.navigate().to(url);
     }
 
-    @FindBy(css = "input[name=q]")
-    WebElement query;
+    public void checkHeader(String content) {
+        Assert.assertEquals(content, header.getText());
+    }
+
+    @FindBy(css = ".fusion-column-wrapper i")
+    private WebElement header;
 }
