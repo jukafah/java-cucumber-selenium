@@ -14,17 +14,15 @@ public class Hooks {
         return driver;
     }
 
+    //  TODO: driver configuration for appium and selenium
     @Before
     public void beforeScenario(Scenario scenario) {
-//        System.out.println("beforeScenario");
-//        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Steve\\Documents\\cucumber-selenium-master\\cucumber-selenium-master\\src\\main\\java\\helpers\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
 
     @After
     public void afterScenario(Scenario scenario) {
-//        System.out.println("afterScenario");
         driver.quit();
     }
 }
