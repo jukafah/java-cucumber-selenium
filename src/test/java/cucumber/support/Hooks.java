@@ -6,6 +6,8 @@ import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Hooks {
 
     private WebDriver driver;
@@ -14,10 +16,12 @@ public class Hooks {
         return driver;
     }
 
-    //  TODO: driver configuration for appium and selenium
+
     @Before
     public void beforeScenario(Scenario scenario) {
+
         driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
 

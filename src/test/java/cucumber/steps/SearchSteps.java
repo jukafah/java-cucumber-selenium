@@ -24,15 +24,9 @@ public class SearchSteps {
 	}
 
 	@When("^select \"([^\"]*)\" in the search results$")
-	public void select_in_the_search_results(String arg1) throws Throwable {
-		throw new PendingException();
+	public void select_in_the_search_results(String expResult) throws Throwable {
+		page.selectResult(expResult);
 	}
-
-	@Then("^I am presented with the \"([^\"]*)\" homepage$")
-	public void i_am_presented_with_the_homepage(String arg1) throws Throwable {
-		throw new PendingException();
-	}
-
 
 }
 

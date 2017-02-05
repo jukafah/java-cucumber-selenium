@@ -18,9 +18,26 @@ public class SearchPage {
 
     public void searchFor(String target)
     {
-        searchBox.clear();
+//        searchBox.clear();
         searchBox.sendKeys(target);
         searchBox.submit();
+    }
+
+    public void selectResult(String expResult) {
+        WebElement elem = findResult(expResult);
+        Assert.assertNotNull(String.format("Link not found for %s", expResult), elem);
+        elem.click();
+    }
+
+    private WebElement findResult(String expResult) {
+        for (WebElement elem : this.searchResults) {
+            System.out.println("ELEM: " + elem.getText());
+            if (elem.getText().toUpperCase().contains(expResult.toUpperCase()))
+            {
+                return elem;
+            }
+        }
+        return null;
     }
 
     @FindBy(css = "#lst-ib")
