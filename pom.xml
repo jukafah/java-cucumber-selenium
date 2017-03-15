@@ -5,7 +5,7 @@
   <artifactId>cucumber-selenium</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>cucumber-selenium</name>
-  <description>Cucumber selenium project for testing</description>
+  <description>Web and mWeb project with Cucumber, Selenium, and *Appium (todo)</description>
   
     <dependencies>
 
@@ -61,7 +61,12 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
-        </dependency
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
 
     </dependencies>
 

@@ -1,7 +1,6 @@
 package cucumber.pages;
 
 import org.junit.Assert;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,12 +14,13 @@ public class SearchPage {
 
     public SearchPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(this.driver, this);
     }
 
-    public void searchFor(String target)
+    public void searchFor(String searchText)
     {
-        searchBox.sendKeys(target);
+        searchBox.clear();
+        searchBox.sendKeys(searchText);
         searchBox.submit();
     }
 
@@ -31,7 +31,7 @@ public class SearchPage {
     }
 
     private WebElement findResult(String expResult) {
-        for (WebElement elem : this.searchResults) {
+        for (WebElement elem : searchResults) {
             if (elem.getText().toUpperCase().contains(expResult.toUpperCase()))
             {
                 return elem;

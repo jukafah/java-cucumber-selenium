@@ -3,29 +3,29 @@ Feature: Demo
 	Google searching should work on all platforms
 
 	@C001 @smokeTest @regression
-	Scenario: Google Search - appium
+	Scenario: Google Search - Appium
 		Given I am on "http://www.google.com"
 		When I search for "appium"
 		And select "Appium" in the search results
 		Then I am presented with the "http://appium.io/" homepage
 
 	@C002 @regression
-	Scenario: Google Search - specflow
+	Scenario: Google Search - Cucumber
 		Given I am on "http://www.google.com"
-		When I search for "specflow"
-		And select "SpecFlow" in the search results
-		Then I am presented with the "http://specflow.org/" homepage
+		When I search for "Cucumber Java"
+		And select "Cucumber JVM" in the search results
+		Then I am presented with the "https://cucumber.io/docs/reference/jvm" homepage
 
 	@C003 @smokeTest @regression
-	Scenario: Google Search - selenium
+	Scenario: Google Search - Selenium
 		Given I am on "http://www.google.com"
 		When I search for "selenium"
 		And select "Selenium - Web Browser Automation" in the search results
 		Then I am presented with the "http://www.seleniumhq.org/" homepage
 
 	@C004 @regression
-	Scenario: Google Search - xamarin
+	Scenario: Google Search - IntelliJ
 		Given I am on "http://www.google.com"
-		When I search for "xamarin"
-		And select "Xamarin" in the search results
-		Then I am presented with the "https://www.xamarin.com/" homepage
+		When I search for "IntelliJ"
+		And select "IntelliJ IDEA" in the search results
+		Then I am presented with the "https://www.jetbrains.com/idea/" homepage
