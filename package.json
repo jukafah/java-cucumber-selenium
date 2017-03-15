@@ -1,0 +1,18 @@
+{
+    "name": "Napa.Client.SpecFlow",
+    "version": "1.0.0",
+    "author": "Steve Momcilovic",
+    "email" : "smomcilovic@tapqa.com",
+    "description": "Client-Web automation dependencies",
+    "scripts": {
+    	"build": "node scripts.js --build",
+    	"test": "node scripts.js --test",
+        "pickles": "node scripts.js --pickles"
+    },
+    "devDependencies": {
+        "appium": "1.6.3",
+        "command-line-args": "3.0.2",
+        "shelljs": "0.6.0",
+        "selenium-standalone": "5.8.0"
+    }
+}

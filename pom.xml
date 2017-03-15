@@ -5,7 +5,7 @@
   <artifactId>cucumber-selenium</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>cucumber-selenium</name>
-  <description>Cucumber selenium project for testing</description>
+  <description>Web and mWeb project with Cucumber, Selenium, and *Appium (todo)</description>
   
     <dependencies>
 
@@ -14,12 +14,27 @@
             <artifactId>selenium-java</artifactId>
             <version>2.53.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>2.53.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>4.1.2</version>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>1.2.5</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
@@ -50,13 +65,8 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>RELEASE</version>
+            <version>4.12</version>
         </dependency>
-        <!--<dependency>-->
-    		<!--<groupId>org.picocontainer</groupId>  -->
-    		<!--<artifactId>picocontainer</artifactId>-->
-    		<!--<version>2.14.3</version>-->
-		<!--</dependency>-->
 
     </dependencies>
 
