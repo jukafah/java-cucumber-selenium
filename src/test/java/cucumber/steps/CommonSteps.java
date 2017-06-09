@@ -3,27 +3,28 @@ package cucumber.steps;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.pages.CommonPage;
 import cucumber.support.Hooks;
+import org.openqa.selenium.WebDriver;
 
 public class CommonSteps {
 
-    private CommonPage page;
+    private WebDriver driver;
 
     public CommonSteps(Hooks hooks)
     {
-        this.page = new CommonPage(hooks.getDriver());
+        this.driver = hooks.getDriver();
     }
 
     @Given("^I am on \"(.*?)\"$")
     public void i_am_on(String url) throws Throwable {
-        page.goTo(url);
+//        screen.goTo(url);
+        driver.get(url);
     }
 
 
     @Then("^I am presented with the \"([^\"]*)\" homepage$")
     public void i_am_presented_with_the_homepage(String expUrl) throws Throwable {
-        page.checkUrl(expUrl);
+//        screen.checkUrl(expUrl);
     }
 
 }

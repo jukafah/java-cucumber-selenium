@@ -1,13 +1,12 @@
 {
-    "name": "Napa.Client.SpecFlow",
+    "name": "java-cucumber-selenium",
     "version": "1.0.0",
     "author": "Steve Momcilovic",
-    "email" : "smomcilovic@tapqa.com",
+    "email" : "steve.momcilovic@gmail.com",
     "description": "Client-Web automation dependencies",
     "scripts": {
     	"build": "node scripts.js --build",
-    	"test": "node scripts.js --test",
-        "pickles": "node scripts.js --pickles"
+    	"test": "node scripts.js --test"
     },
     "devDependencies": {
         "appium": "1.6.3",

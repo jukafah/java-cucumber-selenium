@@ -1,0 +1,42 @@
+{
+
+  "iPhone 6s": {
+    "deviceName": "iPhone 6s",
+    "platformName": "iOS",
+    "platformVersion": "10.2",
+    "automationName": "XCUITEST"
+  },
+
+  "GalaxyS7": {
+    "deviceName": "Galaxy S7",
+    "platformName": "Android",
+    "platformVersion": "6.0",
+    "avd": "GalaxyS7",
+    "avdReadyTimeout": 60000
+  },
+
+  "Chrome": {
+    "browserName": "chrome",
+    "platformName": "desktop"
+  },
+
+  "Firefox": {
+    "browserName": "firefox",
+    "platformName": "desktop"
+  },
+
+  "Safari": {
+    "browserName": "safari",
+    "platformName": "desktop"
+  },
+
+  "IE": {
+    "browserName": "internet explorer",
+    "platformName": "desktop"
+  },
+
+  "Edge": {
+    "browserName": "edge",
+    "platformName": "desktop"
+  }
+}
