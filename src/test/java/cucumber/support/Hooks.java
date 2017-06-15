@@ -51,6 +51,7 @@ public class Hooks {
 
         try {
             driver = factory.createDriver();
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

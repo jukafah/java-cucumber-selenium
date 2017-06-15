@@ -2,15 +2,15 @@ package cucumber.steps;
 
 import cucumber.api.java.en.When;
 
-import cucumber.screens.SearchScreen;
+import cucumber.screens.GoogleScreen;
 import cucumber.support.Hooks;
 
-public class SearchSteps {
+public class GoogleSteps {
 
-	private SearchScreen screen;
+	private GoogleScreen screen;
 
-	public SearchSteps(Hooks hooks) {
-		screen = new SearchScreen(hooks.getDriver());
+	public GoogleSteps(Hooks hooks) {
+		screen = new GoogleScreen(hooks.getDriver());
 	}
 
 	@When("^I search for \"([^\"]*)\"$")

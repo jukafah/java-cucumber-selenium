@@ -8,20 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class SearchScreen extends ScreenObject {
+public class GoogleScreen extends ScreenObject {
 
     private WebDriver driver;
 
-    public SearchScreen(WebDriver driver) {
+    public GoogleScreen(WebDriver driver) {
         super(driver);
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
+
+        trait();
     }
 
-    // todo: implement pattern
     @Override
     public void trait() {
-
+        Assert.assertEquals("https://www.google.com", driver.getCurrentUrl().substring(0, 22));
     }
 
     public void searchFor(String searchText)
@@ -31,22 +32,21 @@ public class SearchScreen extends ScreenObject {
         searchBox.submit();
     }
 
-    // todo: make better - avoid nullables
-    public void selectResult(String expResult) {
-        WebElement elem = findResult(expResult);
-        Assert.assertNotNull(String.format("Link not found for %s", expResult), elem);
-        elem.click();
-    }
+    public void selectResult(String expResult) throws InterruptedException {
 
-    // todo: make better - avoid nullables
-    private WebElement findResult(String expResult) {
+        boolean isFound = false;
+        waitForListLoad(searchResults, 10000);
+
         for (WebElement elem : searchResults) {
-            if (elem.getText().toUpperCase().contains(expResult.toUpperCase()))
-            {
-                return elem;
+
+            if (elem.getText().contains(expResult)) {
+                elem.click();
+                isFound = true;
+                break;
             }
         }
-        return null;
+
+        Assert.assertTrue(String.format("Did not find expected result: %s", expResult), isFound);
     }
 
     @Override

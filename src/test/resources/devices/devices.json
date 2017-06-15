@@ -4,6 +4,7 @@
     "deviceName": "iPhone 6s",
     "platformName": "iOS",
     "platformVersion": "10.2",
+    "browserName": "safari",
     "automationName": "XCUITEST"
   },
 

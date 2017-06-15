@@ -28,9 +28,8 @@ public class Config {
 
 //        String app                    = System.getProperty("app", Paths.get("");
 
-
-        this.username                 = System.getProperty("username", "NEEDS_USER");
-        this.url                      = System.getProperty("seleniumGrid", "http://0.0.0.0:4723/wd/hub");
+        this.username                 = System.getProperty("username", "smomcilovic");
+        this.url                      = System.getProperty("hubUrl", "http://0.0.0.0:4723/wd/hub");
 
         this.deviceMap                = getDevice(deviceName);
 //        this.deviceMap.put("app", app);

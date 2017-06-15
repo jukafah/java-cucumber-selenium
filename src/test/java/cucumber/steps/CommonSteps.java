@@ -1,9 +1,11 @@
 package cucumber.steps;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.support.Hooks;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class CommonSteps {
@@ -17,14 +19,11 @@ public class CommonSteps {
 
     @Given("^I am on \"(.*?)\"$")
     public void i_am_on(String url) throws Throwable {
-//        screen.goTo(url);
         driver.get(url);
     }
 
-
     @Then("^I am presented with the \"([^\"]*)\" homepage$")
-    public void i_am_presented_with_the_homepage(String expUrl) throws Throwable {
-//        screen.checkUrl(expUrl);
+    public void iAmPresentedWithTheHomepage(String expHomepage) throws Throwable {
+        Assert.assertEquals(expHomepage, driver.getCurrentUrl());
     }
-
 }
