@@ -22,12 +22,12 @@ public class GoogleScreen extends ScreenObject {
 
     @Override
     public void trait() {
-        Assert.assertEquals("https://www.google.com", driver.getCurrentUrl().substring(0, 22));
+       Assert.assertTrue("Screen was not displayed!", screenTrait.isDisplayed());
     }
 
     public void searchFor(String searchText)
     {
-        searchBox.clear();
+//        searchBox.clear();
         searchBox.sendKeys(searchText);
         searchBox.submit();
     }
@@ -59,6 +59,9 @@ public class GoogleScreen extends ScreenObject {
                 throw new IllegalArgumentException(String.format("Element not implemented: %s", element));
         }
     }
+
+    @FindBy(id = "hplogo")
+    private WebElement screenTrait;
 
     @FindBy(css = "#lst-ib")
     private WebElement searchBox;

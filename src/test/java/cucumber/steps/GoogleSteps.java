@@ -14,15 +14,13 @@ public class GoogleSteps {
 	}
 
 	@When("^I search for \"([^\"]*)\"$")
-	public void i_search_for(String target) throws Throwable {
+	public void iSearchFor(String target) throws Throwable {
 		screen.searchFor(target);
 	}
 
 	@When("^select \"([^\"]*)\" in the search results$")
-	public void select_in_the_search_results(String expResult) throws Throwable {
+	public void selectInTheSearchResults(String expResult) throws Throwable {
 		screen.selectResult(expResult);
 	}
 
 }
-
-

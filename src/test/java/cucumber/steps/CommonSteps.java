@@ -18,7 +18,7 @@ public class CommonSteps {
     }
 
     @Given("^I am on \"(.*?)\"$")
-    public void i_am_on(String url) throws Throwable {
+    public void iAmOn(String url) throws Throwable {
         driver.get(url);
     }
 
@@ -26,4 +26,6 @@ public class CommonSteps {
     public void iAmPresentedWithTheHomepage(String expHomepage) throws Throwable {
         Assert.assertEquals(expHomepage, driver.getCurrentUrl());
     }
+
+
 }

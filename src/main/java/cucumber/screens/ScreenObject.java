@@ -10,7 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
-abstract class ScreenObject {
+public class ScreenObject {
 
     private WebDriver driver;
 
@@ -19,8 +19,8 @@ abstract class ScreenObject {
         PageFactory.initElements(this.driver, this);
     }
 
-    public abstract void trait();
-    public abstract WebElement getElement(String element);
+    public void trait() { }
+    public WebElement getElement(String element) { return null; }
 
     public void goTo(String destinationUrl) {
         driver.navigate().to(destinationUrl);

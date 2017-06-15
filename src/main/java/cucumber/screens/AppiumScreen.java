@@ -16,27 +16,27 @@ public class AppiumScreen extends ScreenObject {
         super(driver);
         this.driver = driver;
         PageFactory.initElements(this.driver, this);
+
+        trait();
     }
-    
+
     @Override
     public void trait() {
-
+        System.out.println("CHECKING APPIUM");
+        Assert.assertTrue("Screen was not displayed!", screenTrait.isDisplayed());
     }
 
     @Override
     public WebElement getElement(String element) {
 
         switch(element.toUpperCase()) {
-            case "SEARCH BOX":
-                return searchBox;
             default:
                 throw new IllegalArgumentException(String.format("Element not implemented: %s", element));
         }
     }
 
-    @FindBy(css = "#lst-ib")
-    private WebElement searchBox;
 
-    @FindBy(css = "#ires .g .r a")
-    private List<WebElement> searchResults;
+
+    @FindBy(css = ".appium-logo")
+    private WebElement screenTrait;
 }
