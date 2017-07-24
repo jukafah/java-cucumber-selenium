@@ -1,42 +1,27 @@
 package cucumber.screens;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import io.appium.java_client.pagefactory.WithTimeout;
 
-import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.FindBy;
 
 public class AppiumScreen extends ScreenObject {
 
-    private WebDriver driver;
+  public AppiumScreen(RemoteWebDriver driver) {
+    super(driver);
+    trait();
+  }
 
-    public AppiumScreen(WebDriver driver) {
-        super(driver);
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
+  @Override
+  public void trait() {
+    Assert.assertTrue("Screen was not displayed!", trait.isDisplayed());
+  }
 
-        trait();
-    }
-
-    @Override
-    public void trait() {
-        System.out.println("CHECKING APPIUM");
-        Assert.assertTrue("Screen was not displayed!", screenTrait.isDisplayed());
-    }
-
-    @Override
-    public WebElement getElement(String element) {
-
-        switch(element.toUpperCase()) {
-            default:
-                throw new IllegalArgumentException(String.format("Element not implemented: %s", element));
-        }
-    }
-
-
-
-    @FindBy(css = ".appium-logo")
-    private WebElement screenTrait;
+//  @WithTimeout(time = 15, unit = TimeUnit.SECONDS)
+  @FindBy(css = ".navbar .container-fluid .navbar-header .navbar-brand")
+  private WebElement trait;
 }
