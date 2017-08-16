@@ -20,8 +20,5 @@ public class CommonSteps {
     driver.get(url);
   }
 
-  @Then("^I am presented with the \"([^\"]*)\" homepage$")
-  public void iAmPresentedWithTheHomepage(String expHomepage) throws Throwable {
-    Assert.assertEquals(expHomepage, driver.getCurrentUrl());
-  }
+
 }

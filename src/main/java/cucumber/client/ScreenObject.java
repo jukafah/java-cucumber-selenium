@@ -1,5 +1,6 @@
-package cucumber.screens;
+package cucumber.client;
 
+import cucumber.utility.Utility;
 import io.appium.java_client.MobileElement;
 
 import java.lang.reflect.Field;
@@ -19,40 +20,17 @@ public class ScreenObject {
     PageFactory.initElements(this.driver, this);
   }
 
-  public void trait() {}
-
-  // todo: better exception handling
   public MobileElement getElement(String element) {
-    MobileElement elem = null;
+
+    String target = Utility.toCamelCase(element);
 
     try {
-      Field field = getClass().getDeclaredField(element);
+      Field field = getClass().getDeclaredField(target);
       field.setAccessible(true);
-      elem = ((MobileElement) field.get(this));
+      return ((MobileElement) field.get(this));
     } catch (NoSuchFieldException | IllegalAccessException e) {
-      e.printStackTrace();
+      throw new IllegalArgumentException(String.format("Element not found: %s", target));
     }
-
-    Assert.assertNotNull(String.format("Element not found: %s", elem));
-
-    return elem;
-  }
-
-  // todo: better exception handling
-  public List<MobileElement> getElements(String elements) {
-    List<MobileElement> elem = null;
-
-    try {
-      Field field = getClass().getDeclaredField(elements);
-      field.setAccessible(true);
-      elem = (List<MobileElement>) field.get(this);
-    } catch (NoSuchFieldException | IllegalAccessException e) {
-      e.printStackTrace();
-    }
-
-    Assert.assertNotNull(String.format("Element not found: %s", elem));
-
-    return elem;
   }
 
   public void goTo(String destinationUrl) {
@@ -71,11 +49,12 @@ public class ScreenObject {
     getElement(target).click();
   }
 
-  public void waitForListLoad(List<WebElement> elements, long timespan)
-      throws InterruptedException {
+  public void waitForListLoad(List<WebElement> elements) {
+    long currentTime = System.currentTimeMillis();
+    long endTime = currentTime + 10000;
 
-    while (elements.isEmpty()) {
-      Thread.sleep(timespan);
+    while (currentTime < endTime) {
+      if (!elements.isEmpty()) break;
     }
   }
 }

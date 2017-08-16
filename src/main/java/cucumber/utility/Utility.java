@@ -1,5 +1,7 @@
 package cucumber.utility;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -47,5 +49,11 @@ public class Utility {
     calendar.add(Calendar.DATE, daysToAdd);
 
     return formatter.format(calendar.getTime());
+  }
+
+  public static String toCamelCase(String string) {
+    String[] lines = StringUtils.split(string, " ");
+    lines[0] = lines[0].toLowerCase();
+    return StringUtils.join(lines);
   }
 }

@@ -2,6 +2,7 @@ package cucumber.screens;
 
 import java.util.List;
 
+import cucumber.client.ScreenObject;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -14,7 +15,6 @@ public class GoogleScreen extends ScreenObject {
     trait();
   }
 
-  @Override
   public void trait() {
     Assert.assertTrue("Screen was not displayed!", trait.isDisplayed());
   }
@@ -25,7 +25,7 @@ public class GoogleScreen extends ScreenObject {
   }
 
   public void selectResult(String expResult) throws InterruptedException {
-    waitForListLoad(searchResults, 10000);
+    waitForListLoad(searchResults);
 
     searchResults
         .stream()

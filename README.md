@@ -81,7 +81,7 @@ ios-deploy should be global.
 
 **Local**
 
-Install dependencies (appium server)
+Install server dependencies
 ```
 $ npm install
 ```
@@ -89,6 +89,18 @@ $ npm install
 Start Appium
 ```
 $ ./node_modules/appium/build/lib/main.js
+```
+
+OR
+
+Install Selenium
+```
+$ ./node_modules/selenium-standalone/bin/selenium-standalone install
+```
+
+Start Selenium
+```
+$ ./node_modules/selenium-standalone/bin/selenium-standalone start
 ```
 
 Running tests

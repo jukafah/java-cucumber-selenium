@@ -22,9 +22,12 @@ public class Config {
   public Config() {
     this.workspace = System.getProperty("user.dir");
     this.username = System.getProperty("username", "smomcilovic");
-    this.url = System.getProperty("seleniumGrid", "http://0.0.0.0:4723/wd/hub");
 
-    String deviceName = System.getProperty("deviceName", "iPhone 6s");
+    // todo: will need to uniform url for selenium/appium
+    this.url = System.getProperty("seleniumGrid", "http://0.0.0.0:4444/wd/hub");
+
+    // changes device in use
+    String deviceName = System.getProperty("deviceName", "chrome");
     this.deviceMap = getDevice(deviceName);
 
     // if native app testing

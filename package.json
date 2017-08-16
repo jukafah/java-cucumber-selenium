@@ -6,6 +6,6 @@
     "description": "Server dependencies",
     "devDependencies": {
         "appium": "1.6.4",
-        "selenium-standalone": "5.8.0"
+        "selenium-standalone": "6.6.0"
     }
 }

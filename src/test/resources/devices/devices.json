@@ -16,7 +16,7 @@
     "avdReadyTimeout": 60000
   },
 
-  "Chrome": {
+  "chrome": {
     "browserName": "chrome",
     "platformName": "desktop"
   },
