@@ -5,57 +5,63 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Type;
-import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Config {
 
-    public final String workspace;
-    public final String url;
-    public final HashMap<String, Object> deviceMap;
-    public final String username;
+  public final String workspace;
+  public final String url;
+  public final Map<String, Object> deviceMap;
+  public final String username;
 
-    public Config()
-    {
-        this.workspace                = System.getProperty("user.dir");
-        String deviceName             = System.getProperty("deviceName", "iPhone 6s");
-        int wdaLocalPort              = Integer.parseInt(System.getProperty("wdaLocalPort", "8100"));
-        Boolean isRemote              = Boolean.parseBoolean(System.getProperty("isRemote", "false"));
-        String xcodeOrgId             = System.getProperty("xcodeOrgId", "NEEDS_KEY");
-        String xcodeSigningIdentity   = System.getProperty("xcodeSigningId", "iPhone Developer");
+  public Config() {
+    this.workspace = System.getProperty("user.dir");
+    this.username = System.getProperty("username", "smomcilovic");
 
-//        String app                    = System.getProperty("app", Paths.get("");
+    // todo: will need to uniform url for selenium/appium
+    this.url = System.getProperty("seleniumGrid", "http://0.0.0.0:4444/wd/hub");
 
-        this.username                 = System.getProperty("username", "smomcilovic");
-        this.url                      = System.getProperty("hubUrl", "http://0.0.0.0:4723/wd/hub");
+    // changes device in use
+    String deviceName = System.getProperty("deviceName", "chrome");
+    this.deviceMap = getDevice(deviceName);
 
-        this.deviceMap                = getDevice(deviceName);
-//        this.deviceMap.put("app", app);
-        this.deviceMap.put("xcodeOrgId", xcodeOrgId);
-        this.deviceMap.put("xcodeSigningId", xcodeSigningIdentity);
+    // if native app testing
+//    String app =
+//        System.getProperty("app", Paths.get(path/to/app);
+//    this.deviceMap.put("app", app);
 
-        if (isRemote) {
-            this.deviceMap.put("wdaLocalPort", wdaLocalPort);
-        }
-    }
+      // for code signing
+//    String xcodeOrgId = System.getProperty("xcodeOrgId", "SET_ME");
+//    this.deviceMap.put("xcodeOrgId", xcodeOrgId);
+//
+//    String xcodeSigningIdentity = System.getProperty("xcodeSigningId", "iPhone Developer");
+//    this.deviceMap.put("xcodeSigningId", xcodeSigningIdentity);
 
-    private HashMap<String, Object> getDevice(String device) {
+      // for selenium grid execution
+//    Boolean isRemote = Boolean.parseBoolean(System.getProperty("isRemote", "false"));
+//    if (isRemote) {
+//      int wdaLocalPort = Integer.parseInt(System.getProperty("wdaLocalPort", "8100"));
+//      this.deviceMap.put("wdaLocalPort", wdaLocalPort);
+//    }
+  }
 
-        Type hashType = new TypeToken<HashMap<String, Object>>(){}.getType();
-        Gson gson = new Gson();
+  private HashMap<String, Object> getDevice(String device) {
 
-        InputStream deviceFile = getClass().getResourceAsStream("/devices/devices.json");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(deviceFile));
+    Type hashType = new TypeToken<HashMap<String, Object>>() {}.getType();
+    Gson gson = new Gson();
 
-        JsonParser parser = new JsonParser();
+    InputStream deviceFile = getClass().getResourceAsStream("/devices/devices.json");
+    BufferedReader reader = new BufferedReader(new InputStreamReader(deviceFile));
 
-        JsonElement jsonElement = parser
-                .parse(reader)
-                .getAsJsonObject()
-                .get(device);
+    JsonParser parser = new JsonParser();
 
-        return gson.fromJson(jsonElement, hashType);
-    }
+    JsonElement jsonElement = parser.parse(reader).getAsJsonObject().get(device);
+
+    return gson.fromJson(jsonElement, hashType);
+  }
 }

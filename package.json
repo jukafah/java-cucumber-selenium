@@ -3,15 +3,9 @@
     "version": "1.0.0",
     "author": "Steve Momcilovic",
     "email" : "steve.momcilovic@gmail.com",
-    "description": "Client-Web automation dependencies",
-    "scripts": {
-    	"build": "node scripts.js --build",
-    	"test": "node scripts.js --test"
-    },
+    "description": "Server dependencies",
     "devDependencies": {
-        "appium": "1.6.3",
-        "command-line-args": "3.0.2",
-        "shelljs": "0.6.0",
-        "selenium-standalone": "5.8.0"
+        "appium": "1.6.4",
+        "selenium-standalone": "6.6.0"
     }
 }

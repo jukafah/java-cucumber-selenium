@@ -1,20 +1,22 @@
 package cucumber.steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.screens.AppiumScreen;
 import cucumber.support.Hooks;
 
 public class AppiumSteps {
 
-	private AppiumScreen screen;
+  private AppiumScreen screen;
 
-	public AppiumSteps(Hooks hooks) {
-		screen = new AppiumScreen(hooks.getDriver());
-	}
+  public AppiumSteps(Hooks hooks) {
+    this.screen = new AppiumScreen(hooks.getDriver());
+  }
 
-	@Then("^the User views the Appium homepage \"([^\"]*)\"$")
-	public void theUserViewsTheAppiumHomepage(String expectedUrl) throws Throwable {
-		screen.checkUrl(expectedUrl);
-	}
+  @Then("^the User views the Appium screen \"([^\"]*)\"$")
+  public void theUserViewsTheAppiumScreen(String url) throws Throwable {
+    screen.checkUrl(url);
+  }
+
 
 }

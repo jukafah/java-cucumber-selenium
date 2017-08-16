@@ -1,71 +1,46 @@
 package cucumber.screens;
 
-import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
+
+import cucumber.client.ScreenObject;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.FindBy;
 
 public class GoogleScreen extends ScreenObject {
 
-    private WebDriver driver;
+  public GoogleScreen(RemoteWebDriver driver) {
+    super(driver);
+    trait();
+  }
 
-    public GoogleScreen(WebDriver driver) {
-        super(driver);
-        this.driver = driver;
-        PageFactory.initElements(this.driver, this);
+  public void trait() {
+    Assert.assertTrue("Screen was not displayed!", trait.isDisplayed());
+  }
 
-        trait();
-    }
+  public void searchFor(String searchText) {
+    searchBox.sendKeys(searchText);
+    searchBox.submit();
+  }
 
-    @Override
-    public void trait() {
-       Assert.assertTrue("Screen was not displayed!", screenTrait.isDisplayed());
-    }
+  public void selectResult(String expResult) throws InterruptedException {
+    waitForListLoad(searchResults);
 
-    public void searchFor(String searchText)
-    {
-//        searchBox.clear();
-        searchBox.sendKeys(searchText);
-        searchBox.submit();
-    }
+    searchResults
+        .stream()
+        .filter(item -> item.getText().contains(expResult))
+        .findFirst()
+        .orElse(null)
+        .click();
+  }
 
-    public void selectResult(String expResult) throws InterruptedException {
+  @FindBy(id = "hplogo")
+  private WebElement trait;
 
-        boolean isFound = false;
-        waitForListLoad(searchResults, 10000);
+  @FindBy(css = "#lst-ib")
+  private WebElement searchBox;
 
-        for (WebElement elem : searchResults) {
-
-            if (elem.getText().contains(expResult)) {
-                elem.click();
-                isFound = true;
-                break;
-            }
-        }
-
-        Assert.assertTrue(String.format("Did not find expected result: %s", expResult), isFound);
-    }
-
-    @Override
-    public WebElement getElement(String element) {
-
-        switch(element.toUpperCase()) {
-            case "SEARCH BOX":
-                return searchBox;
-            default:
-                throw new IllegalArgumentException(String.format("Element not implemented: %s", element));
-        }
-    }
-
-    @FindBy(id = "hplogo")
-    private WebElement screenTrait;
-
-    @FindBy(css = "#lst-ib")
-    private WebElement searchBox;
-
-    @FindBy(css = "#ires .g .r a")
-    private List<WebElement> searchResults;
+  @FindBy(css = "#ires .g .r a")
+  private List<WebElement> searchResults;
 }

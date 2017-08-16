@@ -3,7 +3,7 @@
   "iPhone 6s": {
     "deviceName": "iPhone 6s",
     "platformName": "iOS",
-    "platformVersion": "10.2",
+    "platformVersion": "10.3",
     "browserName": "safari",
     "automationName": "XCUITEST"
   },
@@ -16,7 +16,7 @@
     "avdReadyTimeout": 60000
   },
 
-  "Chrome": {
+  "chrome": {
     "browserName": "chrome",
     "platformName": "desktop"
   },
